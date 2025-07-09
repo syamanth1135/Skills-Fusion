@@ -1,0 +1,176 @@
+/* Body background color */
+body {
+  margin: 0;
+  padding: 0;
+  background-color: #ffffff;
+}
+
+/* Page container */
+.category-page {
+  max-width: 1100px;
+  margin: 40px auto;
+  padding: 20px;
+  font-family: 'Segoe UI', sans-serif;
+  background-color: #ffffff; /* Ensure white background inside too */
+  border-radius: 20px;
+}
+
+/* Heading */
+.category-page h2 {
+  font-size: 28px;
+  font-weight: 600;
+  color: #0072ff; /* Blue heading */
+  margin-bottom: 30px;
+  text-align: center;
+  position: relative;
+}
+
+/* Underline below the title */
+.category-page h2::after {
+  content: '';
+  display: block;
+  width: 80px;
+  height: 4px;
+  background-color: #00c6ff;
+  margin: 10px auto 0;
+  border-radius: 2px;
+}
+
+/* Grid layout for projects */
+.project-list {
+  list-style: none;
+  padding: 0;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr); /* 2 cards per row */
+  gap: 25px;
+}
+
+/* Individual project card */
+.project-card {
+  background-color: #ffffff;
+  border-radius: 10px;
+  padding: 22px 24px;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.06);
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+  border: 1px solid #e1e1e1;
+  position: relative;
+  overflow: hidden;
+  animation: fadeIn 0.4s ease-in;
+}
+
+/* Hover effect */
+.project-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 12px 26px rgba(0, 0, 0, 0.12);
+}
+
+/* Project title */
+.project-card h3 {
+  font-size: 22px;
+  color: #0072ff;
+  margin-bottom: 14px;
+}
+
+/* Project details */
+.project-card p {
+  margin: 6px 0;
+  font-size: 15px;
+  color: #333;
+  line-height: 1.4;
+}
+
+.project-card p strong {
+  color: #555;
+  font-weight: 500;
+}
+
+/* Action button */
+.project-card button {
+  margin-top: 16px;
+  padding: 10px 18px;
+  font-size: 15px;
+  background-color: #00c6ff;
+  color: white;
+  border: none;
+  border-radius: 10px;
+  cursor: pointer;
+  font-weight: 500;
+  transition: background-color 0.3s ease;
+}
+
+/* Button hover */
+.project-card button:hover {
+  background-color: #0072ff;
+}
+
+/* Fade-in animation */
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(10px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+/* Responsive: stack cards on mobile */
+@media (max-width: 768px) {
+  .category-page {
+    padding: 15px;
+  }
+
+  .project-list {
+    grid-template-columns: 1fr;
+  }
+
+  .project-card {
+    padding: 18px;
+  }
+
+  .project-card h3 {
+    font-size: 20px;
+  }
+
+  .project-card p {
+    font-size: 14px;
+  }
+
+  .project-card button {
+    font-size: 14px;
+    padding: 9px 16px;
+  }
+}
+.category-page {
+  font-family: Arial, sans-serif;
+  max-width: 1000px;
+  margin: auto;
+  background-color: #f8f9fa;
+  border-radius: 8px;
+  padding: 2rem;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+}
+
+.project-list {
+  list-style: none;
+  padding: 0;
+}
+
+.project-card {
+  background: white;
+  border: 1px solid #ddd;
+  border-radius: 10px;
+  padding: 1.5rem;
+  margin-bottom: 1.5rem;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.05);
+}
+
+.action-btn {
+  padding: 0.5rem 1.2rem;
+  background-color: #28a745;
+  color: white;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.action-btn:hover {
+  background-color: #218838;
+}
+
